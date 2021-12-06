@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <!-- Название приложения. -->
+        <title>Drozd Test Junior</title>
+        <!--Скрипт для кнопок переключения
+            между стартовым экраном и меню. -->
+        <script src="Scripts/switch.js"></script>
+        <!--Скрипт для выпадающего списка
+            с перечислением языков. -->
+        <script src="Scripts/dropdown.js"></script>
+        <!--Скрипт для нестандартной
+            полосы прокрутки. -->
+        <script src="Scripts/scrollbar.js"></script>
+        <!--Скрипт для обработки взаимодействия
+            с пунктами меню и подменю. -->
+        <script src="Scripts/options.js"></script>
+        <!--Стили, определяющие общий вид приложения,
+            а также вид элементов стартового экрана
+            приложения. -->
+        <link rel="stylesheet" href="Styles/main.css">
+        <!--Стили, определяющие размеры изображений.
+        -->
+        <link rel="stylesheet" href="Styles/image.css">
+        <!--Описания используемых пользовательских
+            шрифтов, а также стили для всех текстов
+            в рамках приложения. -->
+        <link rel="stylesheet" href="Styles/fonts.css">
+        <!--Стили, определяющие общий вид меню,
+            а также элементов верхнего блока меню. -->
+        <link rel="stylesheet" href="Styles/menu.css">
+        <!--Стили, отвечающие за оформление
+            выпадающего списка языков. -->
+        <link rel="stylesheet" href="Styles/dropdown.css">
+        <!--Стили, связанные с полосой прокрутки. -->
+        <link rel="stylesheet" href="Styles/scrollbar.css">
+        <!--Стили, отвечающие за отображение
+            пунктов основного меню и подменю. -->
+        <link rel="stylesheet" href="Styles/options.css">
+    </head>
+    <body>
+        <!-- Стартовый экран приложения. -->
+        <div id="start-screen" class="layout360x640">
+            <div>
+                <!-- Логотип приложения. -->
+                <div id="logo">Logo</div>
+                <!-- Кнопка открытия меню. -->
+                <div id="run" class="button center">
+                    <div id="burger"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Меню приложения. -->
+        <div id="menu" class="layout360x640">
+            <div>
+                <!-- Кнопка выбора языка. -->
+                <div id="lang" class="lang-unactive">
+                    <img
+                        class="flag-large"
+                        src="Images/Flags/russia.svg"
+                        alt="Флаг России"
+                        title="Флаг России"
+                    />
+                    <div class="title">Ру</div>
+                    <img
+                        class="arrow"
+                        src="Images/Arrows/bottom.svg"
+                        alt="V"
+                    />
+                </div>
+                <!-- Выпадающий список выбора языка. -->
+                <div id="lang-dropdown">
+                    <div class="dropdown-option">
+                        <div class="country-title">Страна</div>
+                    </div>
+                    <!-- Опция: английский США. -->
+                    <div
+                        data-abbr="US"
+                        class="dropdown-option-unactive">
+                        <div>
+                            <img
+                                class="flag-small"
+                                src="Images/Flags/USA.svg"
+                                alt="Соединенные Штаты"
+                                title="Английский (Соединенные Штаты)"
+                                data-flag="Американский флаг"
+                            />
+                            <div class="country">
+                                United States
+                            </div>
+                        </div>
+                        <img
+                            class="tick"
+                            src="Images/UI/tick.svg"
+                            alt="Галочка"
+                        />
+                    </div>
+                    <!-- Опция: голландский язык. -->
+                    <div
+                        data-abbr="Nl"
+                        class="dropdown-option-unactive">
+                        <div>
+                            <img
+                                class="flag-small"
+                                src="Images/Flags/netherlands.svg"
+                                alt="Нидерланды"
+                                title="Голландский (Нидерланды)"
+                                data-flag="Голландский флаг"
+                            />
+                            <div class="country">
+                                Netherlands
+                            </div>
+                        </div>
+                        <img
+                            class="tick"
+                            src="Images/UI/tick.svg"
+                            alt="Галочка"
+                        />
+                    </div>
+                    <!-- Опция: белорусский язык. -->
+                    <div
+                        data-abbr="Бр"
+                        class="dropdown-option-unactive">
+                        <div>
+                            <img
+                                class="flag-small"
+                                src="Images/Flags/belarus.svg"
+                                alt="Беларусь"
+                                title="Белорусский (Беларусь)"
+                                data-flag="Флаг Беларуси"
+                            />
+                            <div class="country">
+                                Беларусь
+                            </div>
+                        </div>
+                        <img
+                            class="tick"
+                            src="Images/UI/tick.svg"
+                            alt="Галочка"
+                        />
+                    </div>
+                    <!-- Опция: русский язык. -->
+                    <div
+                        data-abbr="Ру"
+                        class="dropdown-option-active">
+                        <div>
+                            <img
+                                class="flag-small"
+                                src="Images/Flags/russia.svg"
+                                alt="Россия"
+                                title="Русский (Россия)"
+                                data-flag="Флаг России"
+                            />
+                            <div class="country">
+                                Россия
+                            </div>
+                        </div>
+                        <img
+                            class="tick"
+                            src="Images/UI/tick.svg"
+                            alt="Галочка"
+                        />
+                    </div>
+                    <!-- Опция: казахский язык. -->
+                    <div
+                        data-abbr="Кз"
+                        class="dropdown-option-unactive">
+                        <div>
+                            <img
+                                class="flag-small"
+                                src="Images/Flags/kazakhstan.svg"
+                                alt="Казахстан"
+                                title="Казахский (Казахстан)"
+                                data-flag="Флаг Казахстана"
+                            />
+                            <div class="country">
+                                Казахстан
+                            </div>
+                        </div>
+                        <img
+                            class="tick"
+                            src="Images/UI/tick.svg"
+                            alt="Галочка"
+                        />
+                    </div>
+                    <!-- Опция: турецкий язык. -->
+                    <div
+                        data-abbr="Tü"
+                        class="dropdown-option-unactive">
+                        <div>
+                            <img
+                                class="flag-small"
+                                src="Images/Flags/turkey.svg"
+                                alt="Турция"
+                                title="Турецкий (Турция)"
+                                data-flag="Турецкий флаг"
+                            />
+                            <div class="country">
+                                Türkiye
+                            </div>
+                        </div>
+                        <img
+                            class="tick"
+                            src="Images/UI/tick.svg"
+                            alt="Галочка"
+                        />
+                    </div>
+                </div>
+                <!-- Кнопка закрытия меню. -->
+                <div id="close" class="button center">
+                    <div style="width:30px;height:30px"></div>
+                </div>
+            </div>
+            <!-- Контейнер для группировки основных
+                 и дополнительных пунктов меню. -->
+            <div id="main-options-extras">
+                <!-- Основные пункты меню. -->
+                <div id="main-options" class="title"></div>
+                <!-- Дополнительные пункты меню. -->
+                <div id="extras" class="title"></div>
+            </div>
+            <!-- Заголовок выбранного пункта меню. -->
+            <div id="chosen-option" class="title linked-option">
+                <img
+                    class="arrow"
+                    src="Images/Arrows/left.svg"
+                    alt="<"
+                />
+            </div>
+            <!-- Подпункты выбранного пункта меню. -->
+            <div id="sub-options" class="subtitle"></div>
+            <!-- Подпункты подпунктов меню. -->
+            <div id="last-options" class="subtitle"></div>
+            <!-- Полоса прокрутки. -->
+            <div id="slider">
+                <div id="scrollbar">
+                    <div id="hairline"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

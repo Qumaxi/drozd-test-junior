@@ -1,0 +1,52 @@
+/*  Настройки расположения файлов
+    для пользовательских шрифтов. */
+@font-face {
+    font-family: GolosTextWebRegular;
+    src:url('../Fonts/Golos-Text_Regular.woff2') format('woff2'),
+        url('../Fonts/Golos-Text_Regular.woff') format('woff');}
+@font-face {
+    font-family: GolosTextWebMedium;
+    src:url('../Fonts/Golos-Text_Medium.woff2') format('woff2'),
+        url('../Fonts/Golos-Text_Medium.woff') format('woff');}
+@font-face {
+    font-family: GolosTextWebDemiBold;
+    src:url('../Fonts/Golos-Text_DemiBold.woff2') format('woff2'),
+        url('../Fonts/Golos-Text_DemiBold.woff') format('woff');}
+/*  Титульный текст (используется
+    для языковой аббревиатуры, а также
+    элементов меню первого уровня). */
+.title {
+    font-family: GolosTextWebMedium;
+    font-size: 22px;
+    color: #151617;
+}
+/*  Заголовки элементов меню второго уровня. */
+.subtitle {
+    font-family: GolosTextWebRegular;
+    font-size: 18px;
+    color: #151617;
+}
+/*  Заголовки элементов меню третьего уровня. */
+.heading {
+    font-family: GolosTextWebRegular;
+    font-size: 16px;
+    color: #151617;
+}
+/*  Описания элементов меню третьего уровня. */
+.description {
+    font-family: GolosTextWebRegular;
+    font-size: 12px;
+    color: #577188;
+}
+/* Титул выпадающиего списка с выбором стран. */
+.country-title {
+    font-family: GolosTextWebDemiBold;
+    font-size: 14px;
+    color: #151617;
+}
+/* Текст с названием страны в выпадающем списке.*/
+.country {
+    font-family: GolosTextWebRegular;
+    font-size: 14px;
+    color: #151617;
+}

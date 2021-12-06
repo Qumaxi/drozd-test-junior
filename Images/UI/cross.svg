@@ -1,0 +1,19 @@
+<svg
+ width="60" height="60"
+ viewBox="0 0 60 60"
+ xmlns="http://www.w3.org/2000/svg">
+    <path
+     d="M  11  13
+        l   2  -2
+        l  17  17
+        l  17 -17
+        l   2   2
+        l -17  17
+        l  17  17
+        l  -2   2
+        l -17 -17
+        l -17  17
+        l  -2  -2
+        l  17 -17
+        Z" fill="#151617"/>
+</svg>

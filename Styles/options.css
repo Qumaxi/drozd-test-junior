@@ -1,0 +1,59 @@
+/*  Настройки блока для основных
+    и дополнительных пунктов меню. */
+#main-options-extras {
+    margin-top: 69px;
+    height: 521px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/*  Поля для пунктов меню. */
+#main-options, #extras,
+#sub-options, #last-options {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#extras { margin-bottom: 10px }
+/*  Параметры блоков, соответствующих
+    отдельным пунктам и подпунктам меню. */
+#main-options > div,
+#extras > div,
+#sub-options > div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+/*  Для основных пунктов меню
+    добавим пространство между
+    текстом пункта и стрелочкой.
+    То же самое для подпунктов. */
+#main-options > div, #sub-options > div {
+    justify-content: space-between;
+}
+/*  Выделение пунктов меню,
+    для которых возможен переход. */
+.option-link { cursor: pointer }
+.option-link:hover {
+    color: blue;
+    text-decoration: underline;
+}
+/*  Блок для выбранного пункта меню. */
+#chosen-option {
+    height: 32px;
+    margin-left: 4px;
+    margin-top: 50px;
+    display: none;
+    align-items: center;
+}
+/*  Стрелка обратного перехода. */
+#chosen-option > img { margin: 0 5px }
+/*  Настройки заголовка подпункта подпункта. */
+.heading {
+    line-height: 24px;
+}
+/*  Описание для подпункта подпункта. */
+.description {
+    margin-top: 8px;
+    line-height: 20px;
+    margin-bottom: 34px;
+}

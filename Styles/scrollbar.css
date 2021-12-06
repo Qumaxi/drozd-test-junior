@@ -1,0 +1,48 @@
+/*  Включение стандартной полосы
+    прокрутки в невидимом режиме. */
+#sub-options, #last-options {
+    margin-top: 23px;
+    padding-top: 23px;
+    height: 461px;
+    overflow-y: scroll;
+    /*Невидимая в Firefox*/
+    scrollbar-width: none;
+}
+/*  .. и в Webkit - совместимых
+    браузерах.*/
+#sub-options::-webkit-scrollbar,
+#last-options::-webkit-scrollbar {
+    width: 0}
+/*  Граница, отображаемая над
+    прокручиваемым текстом, чтобы
+    не создавалось впечатления, что
+    текст исчезает в никуда. */
+.text-border {
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #c6d6e5;
+}
+/*  Желобок для полосы прокрутки. */
+#slider {
+    position: absolute;
+    left: 340px;
+    top: 180px;
+    width: 20px;
+    height: 420px;
+    background-color: white;
+}
+/*  Полоса прокрутки. */
+#scrollbar {
+    width: 20px;
+    height: 140px;
+    padding: 7px 9px;
+    position: relative;
+    cursor: pointer;
+}
+/*  Отображаемая часть полосы
+    прокрутки, толщиной с волосок.*/
+#hairline {
+    width: 2px;
+    height: 126px;
+    background-color: #c6d6e5;
+}

@@ -1,0 +1,46 @@
+/*  Меню приложения - изначально
+    скрыто, так как находится позади
+    стартового экрана. */
+#menu {
+    background-color: white;
+    z-index: -1;
+}
+/*  Отодвинем друг от друга отдельные
+    элементы внутри кнопки выбора языка
+    и вертикально выровняем их по центру.
+*/
+#lang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*  Подскажем видом курсора, что неактивную
+    кнопку выбора языка можно задейстовать. */
+.lang-unactive {
+    cursor: pointer;
+}
+/*  Так мы выделим область выбора
+    языка при наведении на нее курсора. */
+.lang-unactive:hover {
+    background-color: yellow;
+    border: 2px solid red;
+    border-radius: 2px;
+}
+/*  А так мы выделим область выбора
+    языка после щелчка по области. */
+.lang-active {
+    background-color: #1c7cec1a;
+    border: 2px solid #82bcff80;
+    border-radius: 2px;
+}
+/*  Изображение для кнопки закрытия меню. */
+#close > div {
+    background-image: url("../Images/UI/cross.svg");
+    background-size: 30px;
+}
+/*  Настроим отображение кнопки закрытия меню
+    при наведении курсора на кнопку. */
+#close:hover { background-color: red }
+#close:hover > div {
+    background-image: url("../Images/UI/white_cross.svg");
+}

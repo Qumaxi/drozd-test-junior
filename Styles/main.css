@@ -1,0 +1,86 @@
+/*  Задание размера экрана, на который
+    рассчитана разрабатываемая верстка.
+    При этом верхний левый угол блока
+    поместим в координаты (0, 0)
+    для упрощения расчета координат
+    в рамках юнит-тестов. */
+.layout360x640 {
+    position: absolute;
+    left: 0; top: 0;
+    width: 360px;
+    height: 640px;
+}
+/*  Первый блок в рамках каждого слоя
+    мобильного меню. */
+.layout360x640 > div:first-child {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+/*  Выделение области вне границ,
+    на которые была рассчитана верстка. */
+body { background-color: steelblue }
+/*  Стартовый экран приложения. */
+#start-screen {
+    background-color: #555555;
+    z-index: 0;
+}
+/*  Область вокруг логотипа приложения. */
+#start-screen > div:first-child {
+    background-color: #04aa6d;
+}
+/*  Определим характеристики шрифта
+    для логотипа приложения, а также
+    размеры и положение блока. */
+#logo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 32px;
+}
+.layout360x640 > div:first-child > div:first-child {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    width: 80px;
+    height: 32px;
+}
+/*  Общие настройки для кнопок. */
+.button {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/*  Кнопка открытия меню. */
+#run { background-color: black }
+/*  Нарисуем на кнопке для открытия
+    меню "бургер" с помощью градиента. */
+#burger {
+    width: 15px;
+    height: 15px;
+    background: linear-gradient(
+        to bottom, 
+        white, white 20%, 
+        #00000000 20%, #00000000 40%, 
+        white 40%, white 60%, 
+        #00000000 60%, #00000000 80%, 
+        white 80%, white 100%
+    );
+}
+/*  Настроим отображение кнопки открытия меню
+    при наведении курсора на кнопку. */
+#run:hover { background-color: #DDDDDD }
+#run:hover > div {
+    background: linear-gradient(
+        to bottom, 
+        black, black 20%, 
+        #00000000 20%, #00000000 40%, 
+        black 40%, black 60%, 
+        #00000000 60%, #00000000 80%, 
+        black 80%, black 100%
+    );
+}

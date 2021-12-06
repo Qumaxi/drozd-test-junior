@@ -1,0 +1,64 @@
+/*  Выпадающий список выбора
+    языка (изначально невидимый).
+    Формула для вычисления координат:
+    left = _left + 2
+    top = _top + _height + 2
+    Где _left, _top и _height берутся
+    из правила для селектора .layout360x640 >
+    div:first-child > div:first-child,
+    а селектор в файле main.css.*/
+#lang-dropdown {
+    position: absolute;
+    left: 22px;
+    top: 44px;
+    background-color: white;
+    box-shadow:
+        0px 3px 5px  #74899b14,
+        0px 1px 18px #74899b0a,
+        0px 6px 10px #74899b0f;
+    width: 180px;
+    display: none;
+}
+/*  Стиль отдельной опции
+    из списка выбора языка. */
+#lang-dropdown > div {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*  Стиль блока со флагом страны
+    и ее названием (блок внутри
+    опции из списка выбора языка).*/
+#lang-dropdown > div > div {
+    padding-left: 15px;
+    display: flex;
+}
+/*  Отсуп между малым флагом
+    и текстом с названием страны.*/
+.dropdown-option > div > img {
+    padding-right: 10px;
+}
+/*  Галочки располагаются на
+    удалении от края экрана и
+    невидимы по умолчанию. */
+.tick {
+    padding-right: 15px;
+    visibility: hidden;
+}
+/*  Стиль при наведении курсора
+    на неактивную опцию из списка
+    выбора языка.*/
+.dropdown-option-unactive:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+/*  Выделение активной опции.*/
+.dropdown-option-active {
+    background-color: #f1f8fe;
+}
+/*  Также активная опция
+    отмечается галочкой.*/
+.dropdown-option-active > .tick {
+    visibility: visible;
+}
